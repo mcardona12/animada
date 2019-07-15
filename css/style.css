@@ -2,27 +2,100 @@
 	padding: 0;
 	margin:0;
 }
+/* La idea es realizar una animación de cada fondo con CSS
+   y que se realicen cambios cada 5 segundos del fondo. */
+
+@keyframes fondo{
+	0% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/*Debo agregar por cada navegador*/
+@-webkit-keyframes fondo{
+	0% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes fondo{
+	0% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 .fondo1 {
 	position: absolute;
 	width: 100%;
 	height: 100vh;
 	background:url(../img/background4.jpg);
+	/*agrego los parametros de la animación*/
+	animation: fondo 24s linear 18s infinite;
+	-webkit-animation: fondo 24s linear 18s infinite;
+	-moz-animation: fondo 24s linear 18s infinite;
 }
 .fondo2 {
 	position: absolute;
 	width: 100%;
 	height: 100vh;
 	background:url(../img/background3.jpg);
+	background-size: cover;
+	/*agrego los parametros de la animación*/
+	animation: fondo 24s linear 12s infinite;
+	-webkit-animation: fondo 24s linear 12s infinite;
+	-moz-animation: fondo 24s linear 12s infinite;
 }
 .fondo3 {
 	position: absolute;
 	width: 100%;
 	height: 100vh;
 	background:url(../img/background2.jpg);
+	background-size: cover;
+	/*agrego los parametros de la animación*/
+	animation: fondo 24s linear 6s infinite;
+	-webkit-animation: fondo 24s linear 6s infinite;
+	-moz-animation: fondo 24s linear 6s infinite;
 }
 .fondo4 {
 	position: absolute;
 	width: 100%;
 	height: 100vh;
 	background:url(../img/background.jpg);
+	/*agrego los parametros de la animación*/
+	animation: fondo 24s linear 0s infinite;
+	-webkit-animation: fondo 24s linear 0s infinite;
+	-moz-animation: fondo 24s linear 0s infinite;
 }
